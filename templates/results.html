@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Correction Results</title>
+  </head>
+  <body>
+    <h1>Correction Results</h1>
+    {% for result in results %}
+    <p>
+      <strong>Kalimat asli:</strong> {{ result.original }}<br />
+      {% if result.baku %}
+      <strong>Kata baku:</strong> {{ result.baku | join(', ') }}<br />
+      {% endif %} {% if result.tidak_baku %}
+      <strong>Kata tidak baku:</strong> {{ result.tidak_baku | join(', ') }}<br />
+      <strong>Kalimat setelah koreksi:</strong> {{ result.corrected }}<br />
+      {% else %}
+      <strong>Semua kata baku.</strong>
+      {% endif %}
+    </p>
+    <hr />
+    {% endfor %}
+    <a href="/">Upload another file</a>
+  </body>
+</html>
