@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LodiSearch</title>
+    <style>
+      @media (min-width: 420px) {
+        body {
+          background: #1c2841;
+        }
+        h1 {
+          color: rgba(241, 241, 9, 0.91);
+          font-size: 128px;
+          text-align: center;
+          font-family: Katibeh;
+          line-height: 153.6px;
+        }
+        p {
+          color: rgb(0, 255, 234);
+        }
+        strong {
+          color: rgb(4, 251, 148);
+        }
+        a {
+          display: inline-block;
+          padding: 10px 20px;
+          font-size: 18px;
+          color: rgb(252, 252, 252);
+          background-color: #0abcb9; /* Green background */
+          text-align: center;
+          text-decoration: none;
+          border-radius: 28px;
+          border: none;
+          cursor: pointer;
+        }
+      }
+      @media (max-width: 421px) {
+        body {
+          background: #1c2841;
+        }
+        h1 {
+          color: rgba(241, 241, 9, 0.91);
+          font-size: 40px;
+          text-align: center;
+          font-family: Katibeh;
+        }
+        p {
+          color: rgb(0, 255, 234);
+        }
+        strong {
+          color: rgb(4, 251, 148);
+        }
+        a {
+          display: inline-block;
+          padding: 10px 20px;
+          font-size: 12px;
+          color: rgb(252, 252, 252);
+          background-color: #0abcb9; /* Green background */
+          text-align: center;
+          text-decoration: none;
+          border-radius: 28px;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>LodiSearch</h1>
+    {% for result in results %}
+    <p>
+      <strong>Kalimat asli:</strong> {{ result.original }}<br />
+      {% if result.baku %}
+      <strong>Kata baku:</strong> {{ result.baku | join(', ') }}<br />
+      {% endif %} {% if result.tidak_baku %}
+      <strong>Kata tidak baku:</strong> {{ result.tidak_baku | join(', ') }}<br />
+      <strong>Kalimat setelah koreksi:</strong> {{ result.corrected }}<br />
+      {% else %}
+      <strong>Semua kata baku.</strong>
+      {% endif %}
+    </p>
+    <hr />
+    {% endfor %}
+    <a href="/">Upload another file</a>
+  </body>
+</html>

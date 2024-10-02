@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LodiSearch</title>
+    <style>
+      @media (min-width: 420px) {
+      body {
+        background: #1C2841;
+        overflow: auto;
+      }
+      h1 {
+        color: #FFF264;
+        font-size: 128px;
+        text-align: center;
+        font-family: Katibeh;
+        line-height: 153.6px;
+      }
+      #A{
+        text-align: center;
+        font-family: Questrial;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 32.96px;
+        margin-top: -80px;
+        opacity: 50%;
+        color: #FFFFFF;
+      }
+      #file {
+        margin-left: 30%;
+        padding: auto;
+        font-size: 24px;
+        color: aliceblue;
+      }
+
+      #file::-webkit-file-upload-button {
+        background-image: linear-gradient(
+          rgb(55, 230, 7),
+          rgba(54, 190, 5, 0.534)
+        );
+        width: 190px;
+        height: 53px;
+        color: white;
+        border: none;
+        border-radius: 28px;
+        padding: 5px 15px;
+        cursor: pointer;
+        font-size: 13px;
+      }
+      #up {
+        background-image: linear-gradient(
+          rgb(55, 230, 7),
+          rgba(54, 190, 5, 0.534)
+        );
+       width: 190px;
+       height: 53px;
+        border: none;
+        border-radius: 28px;
+        cursor: pointer;
+        margin-left: 30%;
+        color: azure;
+        margin-top: 10px;
+      }
+      p {
+        font-family: Questrial;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 32.96px;
+        color: #FFFFFF;
+        opacity: 50%;
+      }
+      ul {
+        color: #FFFFFF;
+         opacity: 50%; 
+         font-size: 30px; 
+      }
+    }
+    @media (max-width: 421px) {
+      body {
+        background: #1C2841;
+        overflow: auto; 
+      }
+      h1 {
+        color: #FFF264;
+        font-size: 40px;
+        text-align: center;
+        font-family: Katibeh;
+        line-height: 153.6px;
+        margin-top: 65px;
+      }
+      #A{
+        text-align: center;
+        font-family: Questrial;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 32.96px;
+        margin-top: -90px;
+        opacity: 50%;
+        color: #FFFFFF;
+      }
+      #file {
+        margin-left: 18%;
+        padding: auto;
+        color: aliceblue;
+        font-size: 10px;
+      }
+      #file::-webkit-file-upload-button {
+        background-image: linear-gradient(
+          rgb(55, 230, 7),
+          rgba(54, 190, 5, 0.534)
+        );
+        width: 80px;
+        height: 25px;
+        color: white;
+        border: none;
+        border-radius: 28px;
+        cursor: pointer;
+        font-size: 12px;
+      }
+      #up {
+        background-image: linear-gradient(
+          rgb(55, 230, 7),
+          rgba(54, 190, 5, 0.534)
+        );
+       width: 80px;
+       height: 25px;
+        border: none;
+        border-radius: 28px;
+        cursor: pointer;
+        margin-left: 18%;
+        color: azure;
+        margin-top: 10px;
+        font-size: 12px;
+      }
+      p {
+        font-family: Questrial;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 32.96px;
+        color: #FFFFFF;
+        opacity: 50%;
+      }
+      ul {
+        color: #FFFFFF;
+         opacity: 50%; 
+         font-size: 15px; 
+      }
+  }
+    </style>
+  </head>
+  <body>
+    <h1>LodiSearch</h1>
+    <p id="A">Upload file dulu yah</p>
+
+    <form action="/" method="post" enctype="multipart/form-data">
+      <input id="file" type="file" name="file" accept=".docx, .pdf" />
+      <input id="up" type="submit" value="Upload" />
+    </form>
+    <p>
+      Note  :
+       <ul >
+        <li>Hanya bisa mengupload file dengan type .docx dan .pdf</li>
+       </ul>
+    </p>
+  </body>
+</html>
